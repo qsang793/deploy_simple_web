@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký ngay</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Thiết lập body */
         body {
             display: flex;
             flex-direction: column;
@@ -15,34 +17,53 @@
             font-family: Arial, sans-serif;
         }
 
-        img {
-            max-width: 100%; /* Hoặc giá trị phù hợp khác */
-            max-height: 100vh;
-            height: auto; /* Đảm bảo tỷ lệ ảnh không bị méo */
-            margin-bottom: 20px;
+        /* Cho container của ảnh và nút button */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: auto; /* Tự động căn theo chiều rộng của ảnh */
+            padding: 20px 0;
         }
 
+        /* Cho ảnh */
+        img {
+            max-height: calc(100vh - 70px); /* Trừ khoảng trống cho button */
+            width: auto; /* Giữ tỷ lệ ảnh */
+            object-fit: contain; /* Đảm bảo ảnh không bị méo */
+        }
+
+        /* Cho nút button */
         .button {
-            padding: 10px 20px;
-            font-size: 18px;
+            width: 100%; /* Đặt chiều rộng của nút bằng với ảnh */
+            padding: 15px 0;
+            font-size: 24px;
+            font-family: 'League Spartan', sans-serif;
             color: #fff;
-            background-color: #007bff;
+            background-color: #007143;
             border: none;
-            border-radius: 5px;
+            /* border-radius: 5px; */
+            text-align: center;
             text-decoration: none;
             cursor: pointer;
+            display: block;
         }
 
         .button:hover {
-            background-color: #0056b3;
+            background-color: #0f2822;
         }
     </style>
 </head>
 <body>
-    <!-- Hiển thị ảnh -->
-    <img src="image_2.png" alt="Hình ảnh">
+    <!-- Container của ảnh và nút button -->
+    <div class="container">
+        <!-- Hiển thị ảnh -->
+        <img src="image_official.png" alt="Hình ảnh">
 
-    <!-- Nút đăng ký -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeemuLWZgYCqQEieAW7RJ8eWrS09rV9BrRgAm300W8cSP2sEQ/viewform" class="button" target="_blank">Đăng ký ngay</a>
+        <!-- Nút đăng ký -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeemuLWZgYCqQEieAW7RJ8eWrS09rV9BrRgAm300W8cSP2sEQ/viewform" class="button" target="_blank">Register Now!</a>
+    </div>
 </body>
 </html>
